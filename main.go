@@ -7,8 +7,8 @@ import (
 )
 
 // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
-//									startPage Function 
-//		   					 handels default request pipleine
+//					startPage Function 
+//		   		handels default request pipleine
 //
 //
 // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
@@ -56,7 +56,7 @@ func startPage(w http.ResponseWriter, r *http.Request) {
 }
 
 // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
-//											main Funciton
+//					main Funciton
 //
 //
 // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
