@@ -5,7 +5,7 @@ Boomer Basic Server Website Template
 This is my attempt to make a very basic web server template written in GO with the goal of trying to avoid Javascript and only use GO instead for performance and security.
 
 Possibly a silly goal, but that won't stop me from doing it. If it ends up looking like a classic Boomer website from the 90s, that's fine by me... call me oppsessive, 
-but I would far perfer to run a compiled lanuage on the backend then run everything though the JVM or .Net or worse use a scripting language for code I may want to be 
+but I would far perfer to run a compiled language on the backend then run everything though the JVM or .Net or worse use a scripting language for code I may want to be 
 preformant in the future.
 
 GO seems perfect for my use case.
