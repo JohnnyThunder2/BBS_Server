@@ -71,17 +71,20 @@ func main() {
 	//fmt.Println("Starting server at port 80")
 	//if err := http.ListenAndServe(":80", nil); err != nil {
 		//fmt.Println(err)}
-	//if err := http.ListenAndServe(":80", http.HandlerFunc(redirectToTls)); err != nil {
-        //fmt.Println("ListenAndServe error: %v", err)}
+
     // HTTPS Server Start-up
     fmt.Println("Starting secure server at port 443")
-	if err := http.ListenAndServeTLS("localhost:443","cert.pem","key.pem", nil); err != nil {
+	if err := http.ListenAndServeTLS(":443","cert.pem","key.pem", nil); err != nil {
 		fmt.Println(err)}
+	
+	// I think this code works to redirect http calls, but it also might be useless...
+	if err := http.ListenAndServe(":80", http.HandlerFunc(redirectToTls)); err != nil {
+		fmt.Println("ListenAndServe error: %v", err)}
 	
 }
 
 // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 // http to https redirect function
-//func redirectToTls(w http.ResponseWriter, r *http.Request) {
-    //http.Redirect(w, r, "https://localhost:443"+r.RequestURI)
-//}
+func redirectToTls(w http.ResponseWriter, r *http.Request) {
+	http.Redirect(w, r, "https://:443"+r.RequestURI, http.StatusMovedPermanently)
+}
